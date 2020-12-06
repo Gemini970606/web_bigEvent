@@ -30,7 +30,7 @@ $(function () {
       username: $("#form_reg [name=username]").val(),
       password: $("#form_reg [name=password").val()
     };
-    $.post('http://ajax.frontend.itheima.net/api/reguser', data
+    $.post('/api/reguser', data
       , function (res) {
         if (res.status !== 0) {
           return layer.msg(res.message)
@@ -45,7 +45,7 @@ $(function () {
   $("#form_login").on("submit", function (e) {
     e.preventDefault()
     $.ajax({
-      url: 'http://ajax.frontend.itheima.net/api/login',
+      url: '/api/login',
       method: 'post',
       data: $(this).serialize(),
       success: function (res) {
@@ -56,7 +56,7 @@ $(function () {
           //登录成功后将token和值存储到本地存储中
           localStorage.setItem("token", res.token)
           //登录成功后将页面跳转到index页面
-          window.location.href = '/index.html'
+        /*    window.location.href = '/index.html'  */
         }
       }
     })
