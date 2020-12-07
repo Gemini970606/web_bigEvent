@@ -31,7 +31,7 @@ function getUserinfo() {
   })
 }
 function renderAvatar(user) {
-  let name = user.nikename || user.username
+  let name = user.nickname || user.username
   $("#welcome").html("欢迎" + name)
   if (!user.user_pic) {
     let first = name[0].toUpperCase()

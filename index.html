@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="/assets/lib/cropper/cropper.css">
   <link rel="stylesheet" href="/assets/css/index.css">
   <link rel="stylesheet" href="/assets/fonts/iconfont.css">
 </head>
@@ -40,7 +41,7 @@
         <div class="userinfo">
           <img class="layui-nav-img">
           <span class="text-avatar"></span>
-          <span id="welcome"></span>b
+          <span id="welcome"></span>
         </div>
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <ul class="layui-nav layui-nav-tree" lay-shrink="all">
@@ -64,8 +65,8 @@
             <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
             <dl class="layui-nav-child">
               <dd><a href="/assets/user/user.html" target="ff">基本资料</a></dd>
-              <dd><a href="javascript:;">更换头像</a></dd>
-              <dd><a href="javascript:;">重置密码</a></dd>
+              <dd><a href="/assets/user/user_avatar.html" target="ff">更换头像</a></dd>
+              <dd><a href="/assets/user/user_pwd.html" target="ff">重置密码</a></dd>
             </dl>
           </li>
         </ul>
@@ -84,6 +85,8 @@
   </div>
   <script src="/assets/lib/layui/layui.all.js"></script>
   <script src="/assets/js/jquery.js"></script>
+  <script src="/assets/lib/cropper/Cropper.js"></script>
+  <script src="/assets/lib/cropper/jquery-cropper.js"></script>
   <!-- 导入baseAPI文件  动弹获取请求根路径 -->
   <script src="assets/js/baseAPI.js"></script>
   <!-- 导入自己的index.js文件 -->
