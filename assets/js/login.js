@@ -56,7 +56,7 @@ $(function () {
           //登录成功后将token和值存储到本地存储中
           localStorage.setItem("token", res.token)
           //登录成功后将页面跳转到index页面
-        /*    window.location.href = '/index.html'  */
+          window.location.href = '/index.html'
         }
       }
     })
