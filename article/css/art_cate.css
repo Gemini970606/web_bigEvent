@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   padding: 15px;
   background-color: #f2f3f5;
@@ -11,4 +12,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#form-add, #form-edit {
+  padding-right: 20px;
+  padding-top: 20px;
 }
