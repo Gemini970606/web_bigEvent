@@ -16,7 +16,6 @@ $(function () {
         if (res.status !== 0) {
           return layer.msg("请求失败")
         } else {
-          console.log(res);
           //调用form.val快速给表单赋值
           form.val("formUserInfo", res.data)
         }
