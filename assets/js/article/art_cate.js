@@ -1,5 +1,6 @@
 $(function () {
   var layer = layui.layer
+  var form = layui.form
   //获取文章分类方法
   getInitData()
   function getInitData() {
