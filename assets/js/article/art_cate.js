@@ -41,13 +41,15 @@ $(function () {
     })
   })
   //通过代理为按钮绑定点击事件
+  let index1 = null
   $("tbody").on("click", "#btnEdit", function () {
-    layer.open({
+    index1 = layer.open({
       type: 1,
       area: ['500px', '300px'],
       title: "修改文章分类",
       content: $("#dialog-edit").html()
     })
+
     let id = $(this).attr("data-id")
     $.ajax({
       method: 'GET',
@@ -57,7 +59,9 @@ $(function () {
       }
     })
   })
-  $("body").on("submit", "#form-edit", function () {
+  //根据id更新文章分类数据
+  $("body").on("submit", "#form-edit", function (e) {
+    e.preventDefault()
     $.ajax({
       method: "post",
       url: "/my/article/updatecate",
@@ -67,8 +71,9 @@ $(function () {
           return layer.msg("更新文章失败")
         } else {
           layer.msg("更新文章成功")
-          layer.closeAll()
+          layer.close(index1)
           getInitData()
+          console.log(123);
         }
       }
     })
